@@ -1,11 +1,11 @@
 import React from 'react';
-import { SectionList, StyleSheet, Text, View } from 'react-native';
+import { SectionList, StyleSheet, Text, View, Button } from 'react-native';
 
 export default class ListScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <SectionList
+        <SectionList 
           sections={[
             {title: 'A', data: ['a', 'A', '@']},
             {title: 'B', data: ['b', 'B', 'bottle', 'etc...']},
@@ -13,6 +13,10 @@ export default class ListScreen extends React.Component {
           renderItem={({item}) => <Text style={styles.item}>{item}</Text>}
           renderSectionHeader={({section}) => <Text style={styles.sectionHeader}>{section.title}</Text>}
           keyExtractor={(item, index) => index}
+        />
+                <Button
+          title="Go to Details"
+          onPress={() => this.props.navigation.navigate('Network')}
         />
       </View>
     );
@@ -22,7 +26,7 @@ export default class ListScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
    flex: 1,
-   paddingTop: 22
+   paddingTop: 5
   },
   sectionHeader: {
     paddingTop: 2,

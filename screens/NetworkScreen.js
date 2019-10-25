@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, ActivityIndicator, Text, View, StyleSheet} from 'react-native';
+import { FlatList, ActivityIndicator, Text, View, StyleSheet,Button,} from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 export default class FetchExample extends React.Component {
@@ -40,13 +40,17 @@ export default class FetchExample extends React.Component {
     }
 
     return(
-      <View style={{flex: 1, padding:20}}>
-        <FlatList
+      <View style={{flex: 1, padding:20, height:100}}>
+        <FlatList style={styles.flatLists}
             data={this.state.dataSource}
 
             renderItem={({item}) => <Text style={styles.textTile} >{item.id}:  {item.title}</Text>}
         
           keyExtractor={({id}, index) => id}
+        />
+        <Button
+          title="Navigation will stop here"
+          onPress={() => this.props.navigation.navigate('Network')}
         />
       </View>
     );
@@ -55,6 +59,10 @@ export default class FetchExample extends React.Component {
 
 
 const styles = StyleSheet.create({
+flatLists:{
+    height: 500,
+    // backgroundColor: 'blue',
+    flexGrow: 0},
 textTile:{
     paddingBottom:15,
     color:'#F44336'

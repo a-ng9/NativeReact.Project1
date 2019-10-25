@@ -5,7 +5,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import HomeScreen from './screens/HomeScreen';
 import DetailsScreen from './screens/DetailScreen';
 import ListScreen from './screens/ListScreen';
-import FetchExample from './screens/NetworkScreen';
+import NetworkGET from './screens/NetworkScreen';
 
 
 const RootStack = createStackNavigator(
@@ -13,7 +13,7 @@ const RootStack = createStackNavigator(
     Home: HomeScreen,
     Details: DetailsScreen,
     List: ListScreen,
-    Network:FetchExample,
+    Network: NetworkGET,
   },
   {
     initialRouteName: 'Home',

@@ -36,6 +36,9 @@ target 'Project' do
 
 
 
+
+  pod 'RNReanimated', :path => '../node_modules/react-native-reanimated'
+
   target 'ProjectTests' do
     inherit! :search_paths
     # Pods for testing

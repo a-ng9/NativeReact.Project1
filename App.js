@@ -6,6 +6,7 @@ import HomeScreen from './screens/HomeScreen';
 import DetailsScreen from './screens/DetailScreen';
 import ListScreen from './screens/ListScreen';
 import NetworkGET from './screens/NetworkScreen';
+import FormScreen from './screens/FormScreen';
 
 
 const RootStack = createStackNavigator(
@@ -14,6 +15,7 @@ const RootStack = createStackNavigator(
     Details: DetailsScreen,
     List: ListScreen,
     Network: NetworkGET,
+    FormV: FormScreen,
   },
   {
     initialRouteName: 'Home',

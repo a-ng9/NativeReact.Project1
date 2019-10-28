@@ -49,8 +49,8 @@ export default class FetchExample extends React.Component {
           keyExtractor={({id}, index) => id}
         />
         <Button
-          title="Navigation will stop here"
-          onPress={() => this.props.navigation.navigate('Network')}
+          title="Navigate to a form screen"
+          onPress={() => this.props.navigation.navigate('FormV')}
         />
       </View>
     );

@@ -8,7 +8,7 @@ export default class ListScreen extends React.Component {
         {/* <ListView /> */}
         <SectionList style={styles.sections}
           sections={[
-            {title: 'A', data: ['a', 'A', '@']},
+            {title: 'A', data: ['a', 'A', 'o']},
             {title: 'B', data: ['b', 'B', 'bottle', 'etc...']},
           ]}
           renderItem={({item}) => <Text style={styles.ixtem}>{item}</Text>}
